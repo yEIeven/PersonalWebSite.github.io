@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Home</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="mobile">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="backMobile">
+        <button type="button" class="button-contato" onclick="location.href='@Url.Action("Contato", "Home")'">CONTATO</button>
+        <button type="button" class="button-curriculoup" onclick="location.href='@Url.Action("Curriculo", "Home")'">CURRÍCULO</button>
+        <button type="button" class="button-projetosup" onclick="location.href='@Url.Action("Projeto", "Home")'">PROJETOS</button>
+        <button type="button" class="button-sobremim" onclick="location.href='@Url.Action("SobreMim", "Home")'">SOBREMIM</button>
+    </div>
+   
+  
+   
+       
+       
+        
+        
+    <div class="initial-text">
+        <h1 class="display-7">Miguel Bacellar</h1>
+        <h1 class="display-6"> / Developer FullStack</h1>
+    </div>
+    <div class="bluesquare"></div>
+    <div class="whitesquare"></div>
+   
+    <input type="checkbox" id="tema">
+    <label for="tema"></label>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
